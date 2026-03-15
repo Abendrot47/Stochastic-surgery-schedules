@@ -41,12 +41,12 @@ The solution, an AI-produced schedule of surgeries, will replace the block sched
 ## Data sources and AI methods
 The 500,000 recored surgery data will be provided by the Univeristy of Missouri hospital system. A smaller proof-of-concept (POC) dataset was provided by St. Vincent hospital, Indianapolis, Indiana.
 The random forest machine learning technique gave good results on the POC data and will be used with the University Missouri hospital data.
-The assignment algorithm is written in AMPL and presented to a publicly available mixed integer solver. 
-It is not yet clear how to handle the stochastic events that limit the current assignment algorithm
+The assignment algorithm is written in AMPL and presented to a publicly available mixed integer solver. This would be a first layer in a neural network
+It is not yet clear how to handle the stochastic events that limit the current assignment algorithm, perhaps simulated annealing in a hidden layer.
 
 ## Challenges
 
-The current solution does not take into account random events that effect the actual surgery  times 
+The current solution does not take into account random events that effect the actual surgery times 
 ## What next?
 
 Given a plausible solution to the stochastic times a surgery may take, we will publish the results in an appropriate journal and make the AI and assignment code available to the public
