@@ -1,10 +1,10 @@
-echo "# Stochastic-surgery-schedules" >> README.md
+<!-- echo "# Stochastic-surgery-schedules" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/Abendrot47/Stochastic-surgery-schedules.git
-git push -u origin main
+git push -u origin main-->
 
 <!-- This is the markdown template for the final project of the Building AI course, 
 created by Reaktor Innovations and University of Helsinki. 
