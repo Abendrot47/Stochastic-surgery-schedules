@@ -5,3 +5,49 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/Abendrot47/Stochastic-surgery-schedules.git
 git push -u origin main
+
+<!-- This is the markdown template for the final project of the Building AI course, 
+created by Reaktor Innovations and University of Helsinki. 
+Copy the template, paste it to your GitHub README and edit! -->
+
+# Project Title
+
+Stochastic Surgery Schedules
+
+## Summary
+
+We have predictions of how long a surgery is expected to take from a sample of 500,000 surgeries in a state hosptial system. We know both the planned time and the actual time.
+Using a machine learning technique, such as random forest, we can predict how long a surgery will take given charactreristics of the patient, such as age, race, BMI, 
+whether the patient is a smoker or not, and other metriocs. We also use categories of the years since medical graduation as an estimate of the skill of the surgeon.
+
+Now that we have a prediction of how long the surgery will take for this patient and surgeon, schedule the surgery in a rolling month-long window. This can be addressed as 
+a version of the general assignment problem using optimimization technique. However, traditional optimization does not take into account random events such as the operating
+room (OR) is not yet cleaned for a new  surgery, hospital transport is dealyed in delivering the patient to the OR, the anathesilogist is not yet in the OR, or other unforseen event.
+
+How do we create a schedule that accommodates these random occurences of delay?
+
+## Background
+
+This project was proposed to the National Institues of Health (NIH) for funding. Although the review team thought well of the machine learning surgery time predctions phase, and
+commented that being able to produce a roughly month-long surgery schedule, the team was critical of the optimizatrion phase. The team thought that phase did not accommodate events 
+that extend the actual time of a surgery such as the OR not being ready to accept a new patient, or a patient not at the OR due to delay in transport to the OR.
+
+
+## How is it used?
+
+The solution, an AI-produced schedule of surgeries, will replace the block scheduling of surgeries used in most hospitals. The schedule will replace the human-created schedule.
+
+
+## Data sources and AI methods
+The 500,000 recored surgery data will be provided by the Univeristy of Missouri hospital system. A smaller proof-of-concept (POC) dataset was provided by St. Vincent hospital, Indianapolis, Indiana.
+The random forest machine learning technique gave good results on the POC data and will be used with the University Missouri hospital data.
+The assignment algorithm is written in AMPL and presented to a publicly available mixed integer solver. 
+It is not yet clear how to handle the stochastic events that limit the current assignment algorithm
+
+## Challenges
+
+The current solution does not take into account random events that effect the actual surgery  times 
+## What next?
+
+Given a plausible solution to the stochastic times a surgery may take, we will publish the results in an appropriate journal and make the AI and assignment code available to the public
+
